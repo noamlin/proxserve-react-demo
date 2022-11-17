@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useReducer } from 'react';
-import { uid } from 'uid';
-import { ProxserveInstance } from 'proxserve';
+import type { ProxserveInstance } from 'proxserve';
 
 export const useProxserveStore = function useProxserveStore<T>(
     context: React.Context<ProxserveInstance & T>,
@@ -12,7 +11,10 @@ export const useProxserveStore = function useProxserveStore<T>(
 	const store = useContext(context);
 
     useEffect(() => {
-        const randomId = uid();
+        // should be random enough for us
+        const randomId = Math.random().toString().slice(2, 10)
+            + Math.random().toString().slice(2, 10)
+            + Math.random().toString().slice(2, 10);
 
         paths2observe.forEach((path) => {
             store.on({

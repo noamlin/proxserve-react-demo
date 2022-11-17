@@ -28,7 +28,7 @@ export const App = () => {
 			title: 'Bottom Section',
 			body: loremIpsum[2]
 		},
-	});
+	}, { name: 'app', debug: { trace: 'verbose' } });
 
 	return (
 		<globalStoreContext.Provider value={globalStore}>

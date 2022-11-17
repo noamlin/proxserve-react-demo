@@ -15,10 +15,9 @@
     "@types/node": "^18.8.3",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
-    "proxserve": "^2.1.0",
+    "proxserve": "^2.1.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "uid": "^2.0.1"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",
